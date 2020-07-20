@@ -52,3 +52,11 @@ Student.print_it()
 s1.print_static(s1)
 
 # s1.print_static(s1)
+
+a = [2]
+if len(a) == 1:
+	print(a.pop())
+else:
+	print("two")
+
+print(len(a))
