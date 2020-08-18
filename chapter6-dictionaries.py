@@ -231,8 +231,75 @@ print(f"Total number of aliens: {len(aliens)}")
 # >Alien: {'color': 'green', 'points': 10, 'speed': 'slow'}
 # >Total number of aliens: 30
 
+print() #line gap
 # A List in a Dictionary
 
-a = 3
-b = None
-print(b and a < b)
+pizza = {
+	"crust": "Thick",
+	"toppings": ["Mushroom", "Olive"],
+}
+
+print(f"The pizza has {pizza['crust']} crust, with toppings:")
+for topping in pizza["toppings"]:
+	print(f"\t{topping}")
+
+# >The pizza has Thick crust, with toppings:
+# >	Mushroom
+# >	Olive
+
+print() #line gap
+# To traverse through each object's list
+favourite_language = {
+	"sarah": ["C++", "java"],
+	"edward": ["Scala"],
+	"jen": ["Go", "Java"]
+}
+
+for name, languages in favourite_language.items():
+	print(f"{name} likes:")
+	for language in languages:
+		print(f"\t{language}")
+
+# >sarah likes:
+# >	C++
+# >	java
+# >edward likes:
+# >	Scala
+# >jen likes:
+# >	Go
+# >	Java
+
+print() #line gap
+# A dictionay in dictionary
+
+users = {
+	"aeinstein": {
+		"first": "albert",
+		"last": "einstein",
+		"location": "princeton",
+	},
+	"mcurie": {
+		"first": "marie",
+		"last": "curie",
+		"location": "paris",
+	},
+}
+
+for username, user_info in users.items():
+	print(f"\nusername: {username}")
+	name = user_info['first'].title() +" "+user_info['last'].title()
+	print(f"fullname: {name}")
+	print(f"location: {user_info['location']}")
+
+
+# >username: aeinstein
+# >fullname: Albert Einstein
+# >location: princeton
+
+# >username: mcurie
+# >fullname: Marie Curie
+# >location: paris
+
+# Notice that the structure of each user’s dictionary is identical. 
+# Although not required by Python, this structure makes nested dictionaries easier to work with. 
+# If each user’s dictionary had different keys, the code inside the for loop would be more complicated.
