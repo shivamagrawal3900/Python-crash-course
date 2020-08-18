@@ -232,3 +232,7 @@ print(f"Total number of aliens: {len(aliens)}")
 # >Total number of aliens: 30
 
 # A List in a Dictionary
+
+a = 3
+b = None
+print(b and a < b)
